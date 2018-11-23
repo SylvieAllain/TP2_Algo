@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TP2PartieA
+comment1.params=value
+comment1.target=char\ transformASCII_IntToChar(int)
+comment2.params=c
+comment2.target=int\ transformASCII_CharToInt(char)
+numComments=3

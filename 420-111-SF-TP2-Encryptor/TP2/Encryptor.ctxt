@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=msg\ encrypt
+comment0.target=void\ validateMessageFormatForDecrytion(java.lang.String,\ boolean)
+comment1.params=msg\ key\ encrypt
+comment1.target=java.lang.String\ runMainCipher(java.lang.String,\ java.lang.String,\ boolean)
+numComments=2
