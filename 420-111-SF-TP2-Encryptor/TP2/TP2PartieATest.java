@@ -8,17 +8,100 @@ public class TP2PartieATest
     
     // ========== TODO: tests additionnels à faire par l'étudiant
     
+    //De la fonction convertBinaryToChar
+    @Test
+    public void WHEN_binaryNumberRepresentsChar_A_THEN_convertBinaryToChar_returnsChar()
+    {
+        //Arrange
+        final char[] BINARY_ARRAY = {'0','1','0','0','0','0','0','1'};
+        
+        //Act
+        char charValue = TP2PartieA.convertBinaryToChar(BINARY_ARRAY);
+        
+        //Assert
+        final char EXPECTED_CHAR_VALUE = 'A';
+        assertEquals(EXPECTED_CHAR_VALUE, charValue);
+    }
+    
+    @Test
+    public void WHEN_binaryNumberRepresentsChar_Z_THEN_convertBinaryToChar_returnsChar()
+    {
+        //Arrange
+        final char[] BINARY_ARRAY = {'0','1','0','1','1','0','1','0'};
+        
+        //Act
+        char charValue = TP2PartieA.convertBinaryToChar(BINARY_ARRAY);
+        
+        //Assert
+        final char EXPECTED_CHAR_VALUE = 'Z';
+        assertEquals(EXPECTED_CHAR_VALUE, charValue);
+    }
+    
+    @Test
+    public void WHEN_binaryNumberRepresentsChar_0_THEN_convertBinaryToChar_returnsChar()
+    {
+        //Arrange
+        final char[] BINARY_ARRAY = {'0','0','1','1','0','0','0','0'};
+        
+        //Act
+        char charValue = TP2PartieA.convertBinaryToChar(BINARY_ARRAY);
+        
+        //Assert
+        final char EXPECTED_CHAR_VALUE = '0';
+        assertEquals(EXPECTED_CHAR_VALUE, charValue);
+    }
+    
+     @Test
+    public void WHEN_binaryNumberRepresentsChar_space_THEN_convertBinaryToChar_returnsChar()
+    {
+        //Arrange
+        final char[] BINARY_ARRAY = {'0','0','1','0','0','0','0','0'};
+        
+        //Act
+        char charValue = TP2PartieA.convertBinaryToChar(BINARY_ARRAY);
+        
+        //Assert
+        final char EXPECTED_CHAR_VALUE = ' ';
+        assertEquals(EXPECTED_CHAR_VALUE, charValue);
+    }
+    
     //De la fonction convertCharToBinary
     @Test
-    public void WHEN_charIs__THEN_convertCharToBinary_returnsBinaryRepresentationOfChar(){    
+    public void WHEN_charIs_colon_THEN_convertCharToBinary_returnsBinaryRepresentationOfChar(){    
         //Arrange
-        char CHAR_VALUE = '0';
+        char CHAR_VALUE = ':';
         
         //Act
         char[] binaryArray = TP2PartieA.convertCharToBinary(CHAR_VALUE);
         
         //Assert
-        final char[] EXPECTED_BINARY_ARRAY = {'0','0','1','1','0','0','0','0'};
+        final char[] EXPECTED_BINARY_ARRAY = {'0','0','1','1','1','0','1','0'};
+        assertArrayEquals(EXPECTED_BINARY_ARRAY, binaryArray);        
+    }
+    
+     @Test
+    public void WHEN_charIs_plus_THEN_convertCharToBinary_returnsBinaryRepresentationOfChar(){    
+        //Arrange
+        char CHAR_VALUE = '+';
+        
+        //Act
+        char[] binaryArray = TP2PartieA.convertCharToBinary(CHAR_VALUE);
+        
+        //Assert
+        final char[] EXPECTED_BINARY_ARRAY = {'0','0','1','0','1','0','1','1'};
+        assertArrayEquals(EXPECTED_BINARY_ARRAY, binaryArray);        
+    }
+    
+         @Test
+    public void WHEN_charIs_space_THEN_convertCharToBinary_returnsBinaryRepresentationOfChar(){    
+        //Arrange
+        char CHAR_VALUE = ' ';
+        
+        //Act
+        char[] binaryArray = TP2PartieA.convertCharToBinary(CHAR_VALUE);
+        
+        //Assert
+        final char[] EXPECTED_BINARY_ARRAY = {'0','0','1','0','0','0','0','0'};
         assertArrayEquals(EXPECTED_BINARY_ARRAY, binaryArray);        
     }
     
@@ -337,7 +420,7 @@ public class TP2PartieATest
         final char[] EXPECTED_BINARY_ARRAY = {'0','0','1','1','0','0','0','0'};
         assertArrayEquals(EXPECTED_BINARY_ARRAY, binaryArray);        
     }
-    /*
+    
     //convertBinaryToChar
     @Test
     public void WHEN_binaryNumberRepresentsChar_a_THEN_convertBinaryToChar_returnsChar()
@@ -403,5 +486,5 @@ public class TP2PartieATest
         //Assert
         final char EXPECTED_CHAR_VALUE = '+';
         assertEquals(EXPECTED_CHAR_VALUE, charValue);
-    }*/
+    }
 }

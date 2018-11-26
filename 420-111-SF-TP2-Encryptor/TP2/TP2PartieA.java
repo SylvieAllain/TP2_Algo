@@ -2,6 +2,10 @@
 
 public class TP2PartieA
 {
+    static char convertBinaryToChar (char[] binarySequence){
+        return transformASCII_IntToChar(convertFromBinaryToInt(binarySequence));
+    }
+    
     static char[] convertCharToBinary(char c){
         return convertFromIntToBinary(transformASCII_CharToInt(c),8);
     }
