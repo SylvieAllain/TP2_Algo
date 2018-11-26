@@ -8,6 +8,20 @@ public class TP2PartieATest
     
     // ========== TODO: tests additionnels à faire par l'étudiant
     
+    //De la fonction convertCharToBinary
+    @Test
+    public void WHEN_charIs__THEN_convertCharToBinary_returnsBinaryRepresentationOfChar(){    
+        //Arrange
+        char CHAR_VALUE = '0';
+        
+        //Act
+        char[] binaryArray = TP2PartieA.convertCharToBinary(CHAR_VALUE);
+        
+        //Assert
+        final char[] EXPECTED_BINARY_ARRAY = {'0','0','1','1','0','0','0','0'};
+        assertArrayEquals(EXPECTED_BINARY_ARRAY, binaryArray);        
+    }
+    
     //De la fonction convertFromBinaryToInt
     @Test
     public void WHEN_binArrayValueIsZero_THEN_convertFromBinaryToInt_returnsIsZero(){
@@ -249,7 +263,7 @@ public class TP2PartieATest
         final char[] EXPECTED_BINARY_ARRAY = {'1','0','0','0','1'};
         assertArrayEquals(EXPECTED_BINARY_ARRAY, binaryArray);
     }    
-/*
+
     //convertCharToBinary
     @Test
     public void WHEN_charIs_a_THEN_convertCharToBinary_returnsBinaryRepresentationOfChar(){
@@ -323,7 +337,7 @@ public class TP2PartieATest
         final char[] EXPECTED_BINARY_ARRAY = {'0','0','1','1','0','0','0','0'};
         assertArrayEquals(EXPECTED_BINARY_ARRAY, binaryArray);        
     }
-    
+    /*
     //convertBinaryToChar
     @Test
     public void WHEN_binaryNumberRepresentsChar_a_THEN_convertBinaryToChar_returnsChar()

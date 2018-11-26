@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=TP2PartieA
-comment1.params=binArray
-comment1.target=int\ convertFromBinaryToInt(char[])
-comment2.params=pos
-comment2.target=int\ getBinValue(int)
-comment3.params=value\ sizeRequired
-comment3.target=char[]\ convertFromIntToBinary(int,\ int)
-comment4.params=value
-comment4.target=char\ transformASCII_IntToChar(int)
-comment5.params=c
-comment5.target=int\ transformASCII_CharToInt(char)
-numComments=6
+comment1.params=c
+comment1.target=char[]\ convertCharToBinary(char)
+comment2.params=binarySequence
+comment2.target=int\ convertFromBinaryToInt(char[])
+comment3.params=pos
+comment3.target=int\ getBinValue(int)
+comment4.params=value\ resultSize
+comment4.target=char[]\ convertFromIntToBinary(int,\ int)
+comment5.params=value
+comment5.target=char\ transformASCII_IntToChar(int)
+comment6.params=c
+comment6.target=int\ transformASCII_CharToInt(char)
+numComments=7

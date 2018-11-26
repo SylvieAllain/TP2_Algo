@@ -2,11 +2,15 @@
 
 public class TP2PartieA
 {
-    static int convertFromBinaryToInt(char[] binArray){
+    static char[] convertCharToBinary(char c){
+        return convertFromIntToBinary(transformASCII_CharToInt(c),8);
+    }
+    
+    static int convertFromBinaryToInt(char[] binarySequence){
         int value = 0;
-        for (int i = binArray.length - 1; i >= 0; i--){
-            if (binArray[i] == '1'){
-                value = value + getBinValue(binArray.length - i - 1);
+        for (int i = binarySequence.length - 1; i >= 0; i--){
+            if (binarySequence[i] == '1'){
+                value = value + getBinValue(binarySequence.length - i - 1);
             }
         }
         return value;
@@ -20,10 +24,10 @@ public class TP2PartieA
         return valueOfPosition;
     }
     
-    static char[] convertFromIntToBinary(int value,int sizeRequired){
-        char[] charArray = new char[sizeRequired];
-        for(int i = 0; i < sizeRequired; i++){
-            int binPosValue = getBinValue(sizeRequired - 1 - i);
+    static char[] convertFromIntToBinary(int value,int resultSize){
+        char[] charArray = new char[resultSize];
+        for(int i = 0; i < resultSize; i++){
+            int binPosValue = getBinValue(resultSize - 1 - i);
             if(binPosValue <= value){
                 value = value - binPosValue;
                 charArray[i] = '1';
