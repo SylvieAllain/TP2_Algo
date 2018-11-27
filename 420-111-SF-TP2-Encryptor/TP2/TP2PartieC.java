@@ -20,6 +20,52 @@ public class TP2PartieC
         String s = new String(rep);
 
         return s;
-    }     
+    } 
+    
+    static char [] changeToSameLengthKeyAndMsg (char [] charMsg, char [] charKey){
+        if (charMsg.length == charKey.length){
+            return charKey;
+        }
+        
+        char [] newCharKey = new char [charMsg.length];
+        int numberOfChar = charKey.length;
+        int addChar = 0;
+        
+        for (int i = 0; i < charMsg.length; i++){
+            newCharKey [i] = charKey[addChar];
+            addChar++;
+            if (addChar == numberOfChar){
+                addChar = 0;
+            }
+        }
+        
+        return newCharKey;
+    }
+    
+    static char [] convertBinarySequencesToBinaryXORCipher (char [] binarySequence1, char [] binarySequence2){
+        char [] binaryXORCipher = new char [binarySequence1.length];
+        
+        for (int i = 0; i < binarySequence1.length; i++){
+            if (binarySequence1[i] == binarySequence2[i]){
+                binaryXORCipher[i] = '0';
+            }
+            else{
+                binaryXORCipher[i] = '1';
+            }
+        }
+        
+        return binaryXORCipher;
+    }
+    
+    static char [] encryptXOR (char [] charMsg, char [] charKey){
+        char [] newCharKey = changeToSameLengthKeyAndMsg (charMsg, charKey);
+        char [] binaryCharMsg = TP2PartieB.convertCharArrayToBinary (charMsg);
+        char [] binaryCharKey = TP2PartieB.convertCharArrayToBinary (newCharKey);
+        char [] binaryArrayXOR = convertBinarySequencesToBinaryXORCipher(binaryCharMsg, binaryCharKey);
+        
+        return binaryArrayXOR;
+    }
+    
+    
 }
                
