@@ -1,6 +1,8 @@
 #BlueJ class context
-comment0.params=msg\ encrypt
-comment0.target=void\ validateMessageFormatForDecrytion(java.lang.String,\ boolean)
-comment1.params=msg\ key\ encrypt
-comment1.target=java.lang.String\ runMainCipher(java.lang.String,\ java.lang.String,\ boolean)
-numComments=2
+comment0.target=Encryptor
+comment0.text=\r\n\ D\u00E9crivez\ votre\ interface\ Encryptor\ ici.\r\n\r\n\ @author\ \ Jasmin\ Brassard\r\n\ @version\ 18\ novembre\ 2016\r\n
+comment1.params=msg\ encrypt
+comment1.target=void\ validateMessageFormatForDecrytion(java.lang.String,\ boolean)
+comment2.params=msg\ key\ encrypt
+comment2.target=java.lang.String\ runMainCipher(java.lang.String,\ java.lang.String,\ boolean)
+numComments=3

@@ -92,6 +92,20 @@ public class TP2PartieCTest
     assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
     
     }
+    
+   @Test
+  public void WHEN_msgIsABinarySequenceOfChars_TT_andKeyIsBinarySequenceOfChar_a_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+    //Arrange
+    char [] charMsg = {'0','1','0','1','0','1','0','0','0','1','0','1','0','1','0','0'};
+    char [] charKey = {'0','1','1','0','0','0','0','1'};
+    
+    //Act
+    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    //Assert
+    final char [] EXPECTED_BINARY_ARRAY_XOR = {'0','1','1','0','0','0','0','1','0','1','1','0','0','0','0','1'};
+    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
+    
+    }
   
   // Tests de la fonction binaryXORCipher
   @Test
@@ -234,4 +248,75 @@ public class TP2PartieCTest
     final char [] EXPECTED_BINARY_ARRAY_XOR = {'0','0','1','1','0','1','0','1','0','0','0','0','0','1','1','1','0','1','0','0','1','0','0','1','0','0','0','1','0','1','0','1','0','1','0','0','1','0','0','1'};
     assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
     } 
+    
+  //Tests de la fonction decryptXOR
+  @Test
+  public void WHEN_binaryMsgCipherContaintsOnlyOneByte_THEN_decryptXOR_returnsCharArray_T(){
+      //Arrange
+      char [] binaryMsg = {'0','0','1','1','0','1','0','1'};
+      char [] charKey = {'a'};
+      
+      //Act
+      char [] charMsg = TP2PartieC.decryptXOR (binaryMsg, charKey);
+      
+      //Assert
+      final char [] EXPECTED_CHAR_MSG = {'T'};
+      assertArrayEquals (EXPECTED_CHAR_MSG,charMsg);
+    }
+    
+   @Test
+  public void WHEN_binaryMsgCipherContaintsOnlyOneBytesButTheKeyManyBytes_THEN_decryptXOR_returnsCharArray_T(){
+      //Arrange
+      char [] binaryMsg = {'0','0','1','1','0','1','0','1'};
+      char [] charKey = {'a','b','c','d'};
+      
+      //Act
+      char [] charMsg = TP2PartieC.decryptXOR (binaryMsg, charKey);
+      
+      //Assert
+      final char [] EXPECTED_CHAR_MSG = {'T'};
+      assertArrayEquals (EXPECTED_CHAR_MSG,charMsg);
+    }
+  
+   @Test
+  public void WHEN_binaryMsgCipherContaintsAsManyBytesThenTheKey_THEN_decryptXOR_returnsCharArray_Test(){
+      //Arrange
+      char [] binaryMsg = {'0','0','1','1','0','1','0','1','0','0','0','0','0','1','1','1','0','0','0','1','0','0','1','0','0','0','0','1','0','1','1','0'};
+      char [] charKey = {'a','b','a','b'};
+      
+      //Act
+      char [] charMsg = TP2PartieC.decryptXOR (binaryMsg, charKey);
+      
+      //Assert
+      final char [] EXPECTED_CHAR_MSG = {'T','e','s','t'};
+      assertArrayEquals (EXPECTED_CHAR_MSG,charMsg);
+    }
+  
+     @Test
+  public void WHEN_binaryMsgCipherContaintsMoreBytesThenTheKey_THEN_decryptXOR_returnsCharArray_Test(){
+      //Arrange
+      char [] binaryMsg = {'0','0','1','1','0','1','0','1','0','0','0','0','0','1','1','1','0','0','0','1','0','0','1','0','0','0','0','1','0','1','1','0'};
+      char [] charKey = {'a','b'};
+      
+      //Act
+      char [] charMsg = TP2PartieC.decryptXOR (binaryMsg, charKey);
+      
+      //Assert
+      final char [] EXPECTED_CHAR_MSG = {'T','e','s','t'};
+      assertArrayEquals (EXPECTED_CHAR_MSG,charMsg);
+    }
+    
+     @Test
+  public void WHEN_binaryMsgCipherContaintsByteThatRepresentCharOtherThanLetters_THEN_decryptXOR_returnsCharArray_Test_Plus(){
+      //Arrange
+      char [] binaryMsg = {'0','0','1','1','0','1','0','1','0','0','0','0','0','1','1','1','0','1','0','0','1','0','0','1','0','0','0','1','0','1','0','1','0','1','0','0','1','0','0','1'};
+      char [] charKey = {'a','b',':'};
+      
+      //Act
+      char [] charMsg = TP2PartieC.decryptXOR (binaryMsg, charKey);
+      
+      //Assert
+      final char [] EXPECTED_CHAR_MSG = {'T','e','s','t','+'};
+      assertArrayEquals (EXPECTED_CHAR_MSG,charMsg);
+    }
 }

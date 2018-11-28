@@ -9,13 +9,13 @@ public class TP2PartieC
         char[] rep = null;
         if(isEncrypting)
         {
-            //char[] binaryCipher = encryptXOR(msgCharArray, keyCharArray);
-            //rep = binaryCipher;
+            char[] binaryCipher = encryptXOR(msgCharArray, keyCharArray);
+            rep = binaryCipher;
         }
         else
         {
             char[] binaryCipher = msgCharArray;           
-            //rep = decryptXOR(binaryCipher, keyCharArray);
+            rep = decryptXOR(binaryCipher, keyCharArray);
         }
         String s = new String(rep);
 
@@ -66,6 +66,13 @@ public class TP2PartieC
         return binaryArrayXOR;
     }
     
-    
+    static char [] decryptXOR(char [] binaryMsg, char [] charKey){
+        char [] binaryCharKey = TP2PartieB.convertCharArrayToBinary (charKey);
+        char [] newBinaryCharKey = changeToSameLengthKeyAndMsg (binaryMsg, binaryCharKey);
+        char [] binaryCharMsg = convertBinarySequencesToBinaryXORCipher (binaryMsg, newBinaryCharKey);
+        char [] charMsg = TP2PartieB.convertBinaryToCharArray (binaryCharMsg);
+        
+        return charMsg;
+    } 
 }
                

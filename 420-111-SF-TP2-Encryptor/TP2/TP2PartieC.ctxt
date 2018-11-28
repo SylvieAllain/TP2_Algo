@@ -8,4 +8,6 @@ comment3.params=binarySequence1\ binarySequence2
 comment3.target=char[]\ convertBinarySequencesToBinaryXORCipher(char[],\ char[])
 comment4.params=charMsg\ charKey
 comment4.target=char[]\ encryptXOR(char[],\ char[])
-numComments=5
+comment5.params=binaryMsg\ charKey
+comment5.target=char[]\ decryptXOR(char[],\ char[])
+numComments=6

@@ -1,8 +1,9 @@
 #BlueJ class context
-comment0.params=encryptor
-comment0.target=GUI(Encryptor)
-comment1.params=
-comment1.target=void\ createGUIContent()
-comment2.params=encrypt
-comment2.target=void\ doAction(boolean)
-numComments=3
+comment0.target=GUI
+comment1.params=encryptor
+comment1.target=GUI(Encryptor)
+comment2.params=
+comment2.target=void\ createGUIContent()
+comment3.params=encrypt
+comment3.target=void\ doAction(boolean)
+numComments=4
