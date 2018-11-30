@@ -1,4 +1,13 @@
 #BlueJ class context
-comment0.params=msg\ key\ isEncrypting
-comment0.target=java.lang.String\ mainCipher(java.lang.String,\ java.lang.String,\ boolean)
-numComments=1
+comment0.target=TP2PartieD
+comment1.params=msg\ key\ isEncrypting
+comment1.target=java.lang.String\ mainCipher(java.lang.String,\ java.lang.String,\ boolean)
+comment2.params=binaryArray
+comment2.target=char\ switchBinaryToHex(char[])
+comment3.params=hexChar
+comment3.target=char[]\ switchHexToBinaryArray(char)
+comment4.params=binaryArray
+comment4.target=char[]\ convertBinaryArrayToHexArray(char[])
+comment5.params=hexArray
+comment5.target=char[]\ convertHexArrayToBinaryArray(char[])
+numComments=6

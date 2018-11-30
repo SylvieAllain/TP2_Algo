@@ -1,10 +1,11 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ execute()
-comment1.params=c
-comment1.target=boolean\ isHexadecimalValue(char)
-comment2.params=msg\ encrypt
-comment2.target=void\ validateMessageFormatForDecrytion(java.lang.String,\ boolean)
-comment3.params=msg\ key\ encrypt
-comment3.target=java.lang.String\ runMainCipher(java.lang.String,\ java.lang.String,\ boolean)
-numComments=4
+comment0.target=EncryptorPartieD
+comment1.params=
+comment1.target=void\ execute()
+comment2.params=c
+comment2.target=boolean\ isHexadecimalValue(char)
+comment3.params=msg\ encrypt
+comment3.target=void\ validateMessageFormatForDecrytion(java.lang.String,\ boolean)
+comment4.params=msg\ key\ encrypt
+comment4.target=java.lang.String\ runMainCipher(java.lang.String,\ java.lang.String,\ boolean)
+numComments=5
