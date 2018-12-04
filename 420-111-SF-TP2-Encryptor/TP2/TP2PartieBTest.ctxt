@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=TP2PartieBTest
 comment1.params=
-comment1.target=void\ WHEN_receiveChar_A_And_C_THEN_convertCharArrayToBinary_returnsArrayWithBinary()
+comment1.target=void\ WHEN_receiveChar_A_And_C_THEN_convertCharArrayToBinary_returnsBinaryArray()
 comment2.params=
-comment2.target=void\ WHEN_receiveChar_A_THEN_convertCharArrayToBinary_returnsArrayWithBinary()
+comment2.target=void\ WHEN_receiveChar_A_THEN_convertCharArrayToBinary_returnsBinaryArray()
 comment3.params=
-comment3.target=void\ WHEN_receiveChar_A_And_C_And_Plus_THEN_convertCharArrayToBinary_returnsArrayWithBinary()
+comment3.target=void\ WHEN_receiveChar_A_And_C_And_Plus_THEN_convertCharArrayToBinary_returnsBinaryArray()
 comment4.params=
-comment4.target=void\ WHEN_receiveChar_A_And_Space_And_a_THEN_convertCharArrayToBinary_returnsArrayWithBinary()
+comment4.target=void\ WHEN_receiveChar_A_And_Space_And_a_THEN_convertCharArrayToBinary_returnsBinaryArray()
 comment5.params=
 comment5.target=void\ WHEN_receiveBinaryWithOneByte_THEN_convertBinaryToCharArray_returnsCharArrayWith_A()
 comment6.params=

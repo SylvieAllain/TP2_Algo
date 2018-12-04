@@ -10,106 +10,106 @@ public class TP2PartieCTest
 {
   //Tests de la fonction sameLengthKeyThatMsg
   @Test
-  public void WHEN_msgIs_T_andKeyIs_a_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+  public void WHEN_msgIs_T_andKeyIs_a_THEN_changeKeyToBeAtLeastSameLengthThanMsg_returnsNewCharArray(){
     //Arrange
     char [] charMsg = {'T'};
     char [] charKey = {'a'};
     
     //Act
-    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    char [] newCharKeyArray = TP2PartieC.changeKeyToBeAtLeastSameLengthThanMsg(charMsg, charKey);
     //Assert
-    final char [] EXPECTED_BINARY_ARRAY_XOR = {'a'};
-    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
+    final char [] EXPECTED_KEY_CHAR_ARRAY = {'a'};
+    assertArrayEquals (EXPECTED_KEY_CHAR_ARRAY, newCharKeyArray);
     
     }
     
     @Test
-  public void WHEN_msgIs_TT_andKeyIs_a_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+  public void WHEN_msgIs_TT_andKeyIs_a_THEN_changeKeyToBeAtLeastSameLengthThanMsg_returnsNewCharArray(){
     //Arrange
     char [] charMsg = {'T','T'};
     char [] charKey = {'a'};
     
     //Act
-    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    char [] newCharKeyArray = TP2PartieC.changeKeyToBeAtLeastSameLengthThanMsg(charMsg, charKey);
     //Assert
-    final char [] EXPECTED_BINARY_ARRAY_XOR = {'a','a'};
-    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
+    final char [] EXPECTED_KEY_CHAR_ARRAY = {'a','a'};
+    assertArrayEquals (EXPECTED_KEY_CHAR_ARRAY, newCharKeyArray);
     
     }
     
    @Test
-  public void WHEN_msgIs_Te_andKeyIs_a_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+  public void WHEN_msgIs_Te_andKeyIs_a_THEN_changeKeyToBeAtLeastSameLengthThanMsg_returnsNewCharArray(){
     //Arrange
     char [] charMsg = {'T','e'};
     char [] charKey = {'a'};
     
     //Act
-    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    char [] newCharKeyArray = TP2PartieC.changeKeyToBeAtLeastSameLengthThanMsg(charMsg, charKey);
     //Assert
-    final char [] EXPECTED_BINARY_ARRAY_XOR = {'a','a'};
-    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
+    final char [] EXPECTED_KEY_CHAR_ARRAY = {'a','a'};
+    assertArrayEquals (EXPECTED_KEY_CHAR_ARRAY, newCharKeyArray);
     
     }
     
    @Test
-  public void WHEN_msgIs_Test_andKeyIs_ab_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+  public void WHEN_msgIs_Test_andKeyIs_ab_THEN_changeKeyToBeAtLeastSameLengthThanMsg_returnsNewCharArray(){
     //Arrange
     char [] charMsg = {'T','e','s','t'};
     char [] charKey = {'a','b'};
     
     //Act
-    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    char [] newCharKeyArray = TP2PartieC.changeKeyToBeAtLeastSameLengthThanMsg(charMsg, charKey);
     //Assert
-    final char [] EXPECTED_BINARY_ARRAY_XOR = {'a','b','a','b'};
-    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
+    final char [] EXPECTED_KEY_CHAR_ARRAY = {'a','b','a','b'};
+    assertArrayEquals (EXPECTED_KEY_CHAR_ARRAY, newCharKeyArray);
     
     }
   
   @Test
-  public void WHEN_msgIs_Tests_andKeyIs_ab_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+  public void WHEN_msgIs_Tests_andKeyIs_ab_THEN_changeKeyToBeAtLeastSameLengthThanMsg_returnsNewCharArray(){
     //Arrange
     char [] charMsg = {'T','e','s','t','s'};
     char [] charKey = {'a','b'};
     
     //Act
-    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    char [] newCharKeyArray = TP2PartieC.changeKeyToBeAtLeastSameLengthThanMsg(charMsg, charKey);
     //Assert
-    final char [] EXPECTED_BINARY_ARRAY_XOR = {'a','b','a','b','a'};
-    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
-    
+    final char [] EXPECTED_KEY_CHAR_ARRAY = {'a','b','a','b','a'};
+    assertArrayEquals (EXPECTED_KEY_CHAR_ARRAY, newCharKeyArray);
+     
     }
     
    @Test
-  public void WHEN_msgIs_Tes_andKeyIs_abcde_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+  public void WHEN_theKeyLengthIsGreaterThanMsgLength_THEN_changeKeyToBeAtLeastSameLengthThanMsg_returnsNewCharArray(){
     //Arrange
     char [] charMsg = {'T','e','s'};
     char [] charKey = {'a','b','c','d','e'};
     
     //Act
-    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    char [] newCharKeyArray = TP2PartieC.changeKeyToBeAtLeastSameLengthThanMsg(charMsg, charKey);
     //Assert
-    final char [] EXPECTED_BINARY_ARRAY_XOR = {'a','b','c'};
-    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
+    final char [] EXPECTED_KEY_CHAR_ARRAY = {'a','b','c'};
+    assertArrayEquals (EXPECTED_KEY_CHAR_ARRAY, newCharKeyArray);
     
     }
     
    @Test
-  public void WHEN_msgIsABinarySequenceOfChars_TT_andKeyIsBinarySequenceOfChar_a_THEN_changeToSameLengthKeyAndMsg_returnsNewCharArray(){
+  public void WHEN_msgIsABinarySequenceOfChars_TT_andKeyIsBinarySequenceOfChar_a_THEN_changeKeyToBeAtLeastSameLengthThanMsg_returnsNewCharArray(){
     //Arrange
     char [] charMsg = {'0','1','0','1','0','1','0','0','0','1','0','1','0','1','0','0'};
     char [] charKey = {'0','1','1','0','0','0','0','1'};
     
     //Act
-    char [] binaryArrayXOR = TP2PartieC.changeToSameLengthKeyAndMsg( charMsg, charKey);
+    char [] newCharKeyArray = TP2PartieC.changeKeyToBeAtLeastSameLengthThanMsg(charMsg, charKey);
     //Assert
-    final char [] EXPECTED_BINARY_ARRAY_XOR = {'0','1','1','0','0','0','0','1','0','1','1','0','0','0','0','1'};
-    assertArrayEquals (EXPECTED_BINARY_ARRAY_XOR,binaryArrayXOR);
+    final char [] EXPECTED_KEY_CHAR_ARRAY = {'0','1','1','0','0','0','0','1','0','1','1','0','0','0','0','1'};
+    assertArrayEquals (EXPECTED_KEY_CHAR_ARRAY, newCharKeyArray);
     
     }
   
-  // Tests de la fonction binaryXORCipher
+  // Tests de la fonction convertBinarySequencesToBinaryXORCipher
   @Test
-  public void WHEN_binarySequencesContaintsOneBitThatDiffer_THEN_convertBinarySequencesToBinaryXORCipher_returnBinaryXORCipher(){
+  public void WHEN_binarySequencesContaintsOneBitThatDiffer1_THEN_convertBinarySequencesToBinaryXORCipher_returnsBinaryXORCipher(){
     //Arrange
     char [] binarySequence1 = {'1'};
     char [] binarySequence2 = {'0'};
@@ -123,8 +123,23 @@ public class TP2PartieCTest
     
     }
     
+    @Test
+  public void WHEN_binarySequencesContaintsOneBitThatDiffer2_THEN_convertBinarySequencesToBinaryXORCipher_returnsBinaryXORCipher(){
+    //Arrange
+    char [] binarySequence1 = {'0'};
+    char [] binarySequence2 = {'1'};
+    
+    //Act
+    char [] binaryXORCipher = TP2PartieC.convertBinarySequencesToBinaryXORCipher(binarySequence1, binarySequence2);
+    
+    //Assert
+    final char [] EXPECTED_BINARY_XOR_CIPHER = {'1'};
+    assertArrayEquals (EXPECTED_BINARY_XOR_CIPHER,binaryXORCipher);
+    
+    }
+    
   @Test
-  public void WHEN_binarySequencesContaintsOneBitThatAreTheSame_THEN_convertBinarySequencesToBinaryXORCipher_returnBinaryXORCipher(){
+  public void WHEN_binarySequencesContaintsTwoBitsThatAreChars_1_THEN_convertBinarySequencesToBinaryXORCipher_returnsBinaryXORCipher(){
     //Arrange
     char [] binarySequence1 = {'1'};
     char [] binarySequence2 = {'1'};
@@ -138,8 +153,23 @@ public class TP2PartieCTest
     
     }
     
+   @Test
+  public void WHEN_binarySequencesContaintsTwoBitsThatAreChars_0_THEN_convertBinarySequencesToBinaryXORCipher_returnsBinaryXORCipher(){
+    //Arrange
+    char [] binarySequence1 = {'0'};
+    char [] binarySequence2 = {'0'};
+    
+    //Act
+    char [] binaryXORCipher = TP2PartieC.convertBinarySequencesToBinaryXORCipher(binarySequence1, binarySequence2);
+    
+    //Assert
+    final char [] EXPECTED_BINARY_XOR_CIPHER = {'0'};
+    assertArrayEquals (EXPECTED_BINARY_XOR_CIPHER,binaryXORCipher);
+    
+    }
+    
   @Test
-  public void WHEN_binarySequencesContaintsTwoBits_THEN_convertBinarySequencesToBinaryXORCipher_returnBinaryXORCipher(){
+  public void WHEN_binarySequencesContaintsTwoBits_THEN_convertBinarySequencesToBinaryXORCipher_returnsBinaryXORCipher(){
     //Arrange
     char [] binarySequence1 = {'1','0'};
     char [] binarySequence2 = {'1','1'};
@@ -154,7 +184,7 @@ public class TP2PartieCTest
     }
     
   @Test
-  public void WHEN_binarySequencesContaintsOneByte_THEN_convertBinarySequencesToBinaryXORCipher_returnBinaryXORCipher(){
+  public void WHEN_binarySequencesContaintsOneByte_THEN_convertBinarySequencesToBinaryXORCipher_returnsBinaryXORCipher(){
     //Arrange
     char [] binarySequence1 = {'1','0','1','1','0','0','0','1'};
     char [] binarySequence2 = {'1','1','0','1','0','0','1','1'};
@@ -169,7 +199,7 @@ public class TP2PartieCTest
     }
     
   @Test
-  public void WHEN_binarySequencesContaintsTwoBytes_THEN_convertBinarySequencesToBinaryXORCipher_returnBinaryXORCipher(){
+  public void WHEN_binarySequencesContaintsTwoBytes_THEN_convertBinarySequencesToBinaryXORCipher_returnsBinaryXORCipher(){
     //Arrange
     char [] binarySequence1 = {'1','0','1','1','0','0','0','1','0','0','1','1','1','0','0','1'};
     char [] binarySequence2 = {'1','1','0','1','0','0','1','1','1','0','1','0','1','0','1','0'};
@@ -265,7 +295,7 @@ public class TP2PartieCTest
     }
     
    @Test
-  public void WHEN_binaryMsgCipherContaintsOnlyOneBytesButTheKeyManyBytes_THEN_decryptXOR_returnsCharArray_T(){
+  public void WHEN_binaryMsgCipherContaintsOnlyOneBytesButTheKeyContaintsManyBytes_THEN_decryptXOR_returnsCharArray_T(){
       //Arrange
       char [] binaryMsg = {'0','0','1','1','0','1','0','1'};
       char [] charKey = {'a','b','c','d'};
@@ -307,7 +337,7 @@ public class TP2PartieCTest
     }
     
      @Test
-  public void WHEN_binaryMsgCipherContaintsByteThatRepresentCharOtherThanLetters_THEN_decryptXOR_returnsCharArray_Test_Plus(){
+  public void WHEN_binaryMsgCipherContaintsAByteThatRepresentACharOtherThanLetters_THEN_decryptXOR_returnsCharArray_Test_Plus(){
       //Arrange
       char [] binaryMsg = {'0','0','1','1','0','1','0','1','0','0','0','0','0','1','1','1','0','1','0','0','1','0','0','1','0','0','0','1','0','1','0','1','0','1','0','0','1','0','0','1'};
       char [] charKey = {'a','b',':'};

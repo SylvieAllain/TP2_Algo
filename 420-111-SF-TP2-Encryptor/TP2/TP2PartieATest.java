@@ -133,7 +133,7 @@ public class TP2PartieATest
     }
     
     @Test
-    public void WHEN_binArrayValueIsZeroOne_THEN_convertFromBinaryToInt_returnsIsTwo(){
+    public void WHEN_binArrayValueIsOneAndZero_THEN_convertFromBinaryToInt_returnsIsTwo(){
         //Arrange        
         final char[] BINARY_ARRAY = {'1','0'};
         
@@ -212,7 +212,7 @@ public class TP2PartieATest
         assertEquals(EXPECTED_INT_VALUE, intValue);
     }
     
-    //De la fonction convertIntToBinary
+    //De la fonction convertFromIntToBinary
     @Test
     public void WHEN_intValueIs_0_THEN_convertFromIntToBinary_returnsBinaryRepresentationOfIntValue(){
         //Arrange

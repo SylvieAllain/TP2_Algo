@@ -74,7 +74,7 @@ public class TP2PartieDTest
     
     //Tests de la fonction convertBinaryArrayToHexArray 
     @Test
-    public void WHEN_binaryArrayRepresentOneHexChar_THEN_convertBinaryArrayToHexArray (){
+    public void WHEN_binaryArrayRepresentOneHexChar_THEN_convertBinaryArrayToHexArray_returnsHexArray (){
         //Arrange
         char [] binaryArray = {'0','0','0','0'};
         
@@ -87,7 +87,7 @@ public class TP2PartieDTest
     }
     
     @Test
-    public void WHEN_binaryArrayRepresentTwoHexChar_THEN_convertBinaryArrayToHexArray (){
+    public void WHEN_binaryArrayRepresentTwoHexChar_THEN_convertBinaryArrayToHexArray_returnsHexArray (){
         //Arrange
         char [] binaryArray = {'0','0','0','0','1','1','1','1'};
         
@@ -100,7 +100,7 @@ public class TP2PartieDTest
     }
     
     @Test
-    public void WHEN_binaryArrayRepresentManyHexChar_THEN_convertBinaryArrayToHexArray (){
+    public void WHEN_binaryArrayRepresentManyHexChar_THEN_convertBinaryArrayToHexArray_returnsHexArray (){
         //Arrange
         char [] binaryArray = {'0','0','0','0','1','1','1','1','0','0','0','0','1','1','1','1'};
         
@@ -113,7 +113,7 @@ public class TP2PartieDTest
     }
     
     @Test
-    public void WHEN_binaryArrayRepresentManyHexCharIncludingAn_A_THEN_convertBinaryArrayToHexArray (){
+    public void WHEN_binaryArrayRepresentManyHexCharIncludingAn_A_THEN_convertBinaryArrayToHexArray_returnsHexArray (){
         //Arrange
         char [] binaryArray = {'0','0','0','0','1','1','1','1','1','0','1','0','0','0','0','0','1','1','1','1'};
         
@@ -127,7 +127,7 @@ public class TP2PartieDTest
     
     //Tests de la fonction switchHexToArray 
     @Test
-    public void WHEN_binaryArrayRepresentInt_0_THEN_switchHexToBinaryArray_returnsHexChar_0(){
+    public void WHEN_binaryArrayRepresentInt_0_THEN_switchHexToBinaryArray_returnsBinaryArray(){
         //Arrange
         char hexChar = '0';
         
@@ -193,7 +193,7 @@ public class TP2PartieDTest
     
     //Tests de la fonction convertHexArrayToBinaryArray
     @Test
-    public void WHEN_hexArrayRepresentOneBinaryNibble_THEN_convertHexArrayToBinaryArray_ReturnBinaryArray (){
+    public void WHEN_hexArrayRepresentOneBinaryNibble_THEN_convertHexArrayToBinaryArray_returnsBinaryArray (){
         //Arrange
         char [] hexArray = {'0'};
         
@@ -206,7 +206,7 @@ public class TP2PartieDTest
     }
     
     @Test
-    public void WHEN_hexArrayRepresentTwoBinaryNibble_THEN_convertHexArrayToBinaryArray_ReturnBinaryArray (){
+    public void WHEN_hexArrayRepresentTwoBinaryNibble_THEN_convertHexArrayToBinaryArray_returnsBinaryArray (){
         //Arrange
         char [] hexArray = {'0','F'};
         
@@ -219,7 +219,7 @@ public class TP2PartieDTest
     }
     
     @Test
-    public void WHEN_hexArrayRepresentManyBinaryNibble_THEN_convertHexArrayToBinaryArray_ReturnBinaryArray (){
+    public void WHEN_hexArrayRepresentManyBinaryNibble_THEN_convertHexArrayToBinaryArray_returnsBinaryArray (){
         //Arrange
         char [] hexArray = {'0','F','0','F'};
         
@@ -232,7 +232,7 @@ public class TP2PartieDTest
     }
     
      @Test
-    public void WHEN_hexArrayIncludingAn_A_RepresentManyBinaryNibble_THEN_convertHexArrayToBinaryArray_ReturnBinaryArray (){
+    public void WHEN_hexArrayIncludingAn_A_RepresentManyBinaryNibble_THEN_convertHexArrayToBinaryArray_returnsBinaryArray (){
         //Arrange
         char [] hexArray = {'0','F','A','0','F'};
         

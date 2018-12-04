@@ -22,7 +22,7 @@ public class TP2PartieC
         return s;
     } 
     
-    static char [] changeToSameLengthKeyAndMsg (char [] charMsg, char [] charKey){
+    static char [] changeKeyToBeAtLeastSameLengthThanMsg (char [] charMsg, char [] charKey){
         if (charMsg.length == charKey.length){
             return charKey;
         }
@@ -58,7 +58,7 @@ public class TP2PartieC
     }
     
     static char [] encryptXOR (char [] charMsg, char [] charKey){
-        char [] newCharKey = changeToSameLengthKeyAndMsg (charMsg, charKey);
+        char [] newCharKey = changeKeyToBeAtLeastSameLengthThanMsg (charMsg, charKey);
         char [] binaryCharMsg = TP2PartieB.convertCharArrayToBinary (charMsg);
         char [] binaryCharKey = TP2PartieB.convertCharArrayToBinary (newCharKey);
         char [] binaryArrayXOR = convertBinarySequencesToBinaryXORCipher(binaryCharMsg, binaryCharKey);
@@ -68,7 +68,7 @@ public class TP2PartieC
     
     static char [] decryptXOR(char [] binaryMsg, char [] charKey){
         char [] binaryCharKey = TP2PartieB.convertCharArrayToBinary (charKey);
-        char [] newBinaryCharKey = changeToSameLengthKeyAndMsg (binaryMsg, binaryCharKey);
+        char [] newBinaryCharKey = changeKeyToBeAtLeastSameLengthThanMsg (binaryMsg, binaryCharKey);
         char [] binaryCharMsg = convertBinarySequencesToBinaryXORCipher (binaryMsg, newBinaryCharKey);
         char [] charMsg = TP2PartieB.convertBinaryToCharArray (binaryCharMsg);
         

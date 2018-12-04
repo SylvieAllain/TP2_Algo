@@ -12,6 +12,7 @@ public class TP2PartieB
                 binaryArray [j + (i * BYTE_SIZE)] = charBinaryArray[j];
             }
         }
+        
         return binaryArray;
     }
     
@@ -25,6 +26,7 @@ public class TP2PartieB
             }
             charArray [i] = TP2PartieA.convertBinaryToChar(charBinaryArray);
         }
+        
         return charArray;
     }
 }

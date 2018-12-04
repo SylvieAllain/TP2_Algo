@@ -5,9 +5,9 @@ import static org.junit.Assert.*;
 public class TP2PartieBTest
 {
     
-    //Tests de la fonction "convertCharArrayToBinary"
+    //Tests de la fonction convertCharArrayToBinary
     @Test
-    public void WHEN_receiveChar_A_And_C_THEN_convertCharArrayToBinary_returnsArrayWithBinary(){
+    public void WHEN_receiveChar_A_And_C_THEN_convertCharArrayToBinary_returnsBinaryArray(){
         //Arrange
         char [] charArray = {'A','C'};
         
@@ -20,7 +20,7 @@ public class TP2PartieBTest
     }
     
     @Test
-    public void WHEN_receiveChar_A_THEN_convertCharArrayToBinary_returnsArrayWithBinary(){
+    public void WHEN_receiveChar_A_THEN_convertCharArrayToBinary_returnsBinaryArray(){
         //Arrange
         char [] charArray = {'A'};
         
@@ -33,7 +33,7 @@ public class TP2PartieBTest
     }
     
     @Test
-    public void WHEN_receiveChar_A_And_C_And_Plus_THEN_convertCharArrayToBinary_returnsArrayWithBinary(){
+    public void WHEN_receiveChar_A_And_C_And_Plus_THEN_convertCharArrayToBinary_returnsBinaryArray(){
         //Arrange
         char [] charArray = {'A','C','+'};
         
@@ -46,7 +46,7 @@ public class TP2PartieBTest
     }
     
     @Test
-    public void WHEN_receiveChar_A_And_Space_And_a_THEN_convertCharArrayToBinary_returnsArrayWithBinary(){
+    public void WHEN_receiveChar_A_And_Space_And_a_THEN_convertCharArrayToBinary_returnsBinaryArray(){
         //Arrange
         char [] charArray = {'A',' ','a'};
         
@@ -58,7 +58,7 @@ public class TP2PartieBTest
         assertArrayEquals (EXPECTED_BINARY_ARRAY,binaryArray);
     }
     
-    // Tests de la fonction "convertBinaryToCharArray"
+    // Tests de la fonction convertBinaryToCharArray
     @Test
     public void WHEN_receiveBinaryWithOneByte_THEN_convertBinaryToCharArray_returnsCharArrayWith_A(){
         //Arrange
